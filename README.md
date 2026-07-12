@@ -361,3 +361,9 @@ This milestone will create the foundation for deeper runtime work later.
 WinDroid Runtime is developed under **Nova Systems Lab**, an independent open-source organization focused on systems software, developer tools, platform integration, and experimental runtime technologies.
 
 ---
+
+## License
+
+This project is licensed under the Apache License 2.0.
+
+See the LICENSE file for details.
