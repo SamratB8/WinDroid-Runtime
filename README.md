@@ -346,8 +346,18 @@ The first practical milestone is to build WinDroid Studio v0.1, a native Windows
 
 This milestone will create the foundation for deeper runtime work later.
 
-## License
+---
 
-This project is licensed under the Apache License 2.0.
+## Part of Nova Systems Lab
 
-See the LICENSE file for details.
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/Nova-Systems-Lab/.github/main/profile/assets/nova-systems-lab-horizontal.png"
+    alt="Nova Systems Lab"
+    width="420"
+  >
+</p>
+
+WinDroid Runtime is developed under **Nova Systems Lab**, an independent open-source organization focused on systems software, developer tools, platform integration, and experimental runtime technologies.
+
+---
