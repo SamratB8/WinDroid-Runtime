@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>WinDroid.Adb</RootNamespace>
+    <AssemblyName>WinDroid.Adb</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WinDroid.Core\WinDroid.Core.csproj" />
+  </ItemGroup>
+
+</Project>

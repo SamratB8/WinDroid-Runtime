@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/WinDroid.Adb/WinDroid.Adb.csproj" />
+    <Project Path="src/WinDroid.Core/WinDroid.Core.csproj" />
+    <Project Path="src/WinDroid.Engine/WinDroid.Engine.csproj" />
+    <Project Path="src/WinDroid.Studio/WinDroid.Studio.csproj" />
+  </Folder>
+</Solution>

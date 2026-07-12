@@ -113,7 +113,7 @@ Research areas:
 
 ### Phase 1 — Native Windows Control App
 
-- [ ] Create WinUI 3 / .NET project structure
+- [x] Create WinUI 3 / .NET project structure
 - [ ] Build initial dashboard UI
 - [ ] Add project settings page
 - [ ] Add logging system
@@ -201,6 +201,59 @@ WinDroid-Runtime/
 ├── SECURITY.md
 └── .gitignore
 ```
+
+## Current Solution Structure
+
+The initial multi-project solution has been scaffolded. This is foundational
+structure only — it establishes the planned architecture and builds cleanly, but
+no ADB functionality, Android runtime, or virtualization backend exists yet.
+
+```text
+WinDroid-Runtime/
+├── src/
+│   ├── WinDroid.Studio/     # WinUI 3 desktop app (unpackaged), minimal window
+│   ├── WinDroid.Core/       # Class library (empty foundation)
+│   ├── WinDroid.Adb/        # Class library (empty foundation, references Core)
+│   └── WinDroid.Engine/     # Class library (empty architectural boundary)
+│
+├── tests/                   # Reserved for future test projects
+├── Directory.Build.props    # Shared build settings
+├── WinDroid.Runtime.slnx    # Solution (XML format)
+├── README.md
+├── LICENSE
+└── .gitignore
+```
+
+Project dependencies:
+
+```text
+WinDroid.Studio  ->  WinDroid.Core, WinDroid.Adb
+WinDroid.Adb     ->  WinDroid.Core
+WinDroid.Core    ->  (no project references)
+WinDroid.Engine  ->  (isolated)
+```
+
+### Building
+
+Prerequisites (verified with the toolchain used to scaffold this solution):
+
+- Windows 11
+- .NET SDK 10.0.x (the class libraries target `net8.0`; the app targets
+  `net8.0-windows10.0.19041.0`)
+- Windows App SDK 2.2.0 (restored automatically via NuGet)
+- Visual Studio 2026 (or 2022) with the **Windows App SDK C#** /
+  **.NET Desktop Development** workload and a Windows 10/11 SDK. This workload
+  may be required to open, build, and run `WinDroid.Studio` (WinUI 3).
+
+Build from the repository root:
+
+```powershell
+dotnet restore .\WinDroid.Runtime.slnx
+dotnet build .\WinDroid.Runtime.slnx --configuration Debug --no-restore
+dotnet build .\WinDroid.Runtime.slnx --configuration Release --no-restore
+```
+
+The solution can also be opened and built directly in Visual Studio.
 
 ## Technology Stack
 

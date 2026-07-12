@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="WinDroid.Studio.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="WinDroid Runtime">
+
+    <StackPanel
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        Spacing="8">
+        <TextBlock
+            Text="WinDroid Runtime"
+            HorizontalAlignment="Center"
+            Style="{StaticResource TitleLargeTextBlockStyle}" />
+        <TextBlock
+            Text="Initial development environment"
+            HorizontalAlignment="Center"
+            Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+            Style="{StaticResource BodyTextBlockStyle}" />
+    </StackPanel>
+
+</Window>

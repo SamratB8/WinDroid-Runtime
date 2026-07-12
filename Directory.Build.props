@@ -1,0 +1,14 @@
+<Project>
+
+  <!--
+    Shared build configuration for all WinDroid Runtime projects.
+    Keep this minimal; project-specific settings belong in each .csproj.
+  -->
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latestMajor</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+</Project>
