@@ -8,7 +8,7 @@
     <StackPanel
         HorizontalAlignment="Center"
         VerticalAlignment="Center"
-        Spacing="8">
+        Spacing="12">
         <TextBlock
             Text="WinDroid Runtime"
             HorizontalAlignment="Center"
@@ -18,6 +18,18 @@
             HorizontalAlignment="Center"
             Foreground="{ThemeResource TextFillColorSecondaryBrush}"
             Style="{StaticResource BodyTextBlockStyle}" />
+            
+        <Button x:Name="SelectApkButton" 
+                Content="Select APK" 
+                Click="SelectApkButton_Click" 
+                HorizontalAlignment="Center"
+                Style="{ThemeResource AccentButtonStyle}"/>
+                
+        <TextBlock x:Name="SelectedApkPathTextBlock" 
+                   Text="No APK selected" 
+                   HorizontalAlignment="Center"
+                   Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                   Style="{StaticResource BodyTextBlockStyle}"/>
     </StackPanel>
 
 </Window>
