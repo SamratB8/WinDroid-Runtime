@@ -335,6 +335,18 @@ Contributors, mentors, and developers interested in the following areas are welc
 
 Contribution guidelines will be added as the project structure becomes more stable.
 
+## Community and Support
+
+For quick questions, community discussion, testing feedback, and contributor coordination, join the Nova Systems Lab Discord server:
+
+[Join Nova Systems Lab on Discord](https://discord.gg/sfFyVyTfX8)
+
+For official project work:
+
+- Use GitHub Discussions for detailed proposals and long-term discussions.
+- Use GitHub Issues for confirmed bugs and actionable tasks.
+- Use Pull Requests for code and documentation changes.
+
 ## Current First Milestone
 
 The first practical milestone is to build WinDroid Studio v0.1, a native Windows application that can:
