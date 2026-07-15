@@ -5,6 +5,11 @@
 ![Language](https://img.shields.io/badge/language-C%23-purple)
 ![License](https://img.shields.io/badge/license-Apache%202.0-green)
 
+[Website](https://novasystemslab.org) ·
+[Organization](https://novasystemslab.org) ·
+[Discussions](https://github.com/Nova-Systems-Lab/WinDroid-Runtime/discussions) ·
+[Issues](https://github.com/Nova-Systems-Lab/WinDroid-Runtime/issues)
+
 **WinDroid Runtime** is an independent Android-compatible runtime and toolkit for Windows.
 
 The long-term goal of this project is to build a modern platform that allows Android applications to run, integrate, and feel natural on Windows. The project is being designed from scratch, starting with developer tooling, APK management, ADB integration, and runtime research before moving toward experimental Android runtime and desktop integration research.
@@ -346,6 +351,8 @@ For official project work:
 - Use GitHub Discussions for detailed proposals and long-term discussions.
 - Use GitHub Issues for confirmed bugs and actionable tasks.
 - Use Pull Requests for code and documentation changes.
+
+For private security reports, follow the [security policy](SECURITY.md) or contact [security@novasystemslab.org](mailto:security@novasystemslab.org).
 
 ## Current First Milestone
 
