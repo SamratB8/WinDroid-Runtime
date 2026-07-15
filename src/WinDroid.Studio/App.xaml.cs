@@ -8,25 +8,30 @@ namespace WinDroid.Studio;
 /// </summary>
 public partial class App : Application
 {
-    private readonly IDisposable _sentry;
+    private IDisposable? _sentry;
     private Window? _window;
 
     public App()
     {
-        _sentry = SentrySdk.Init(options =>
+        InitializeComponent();
+
+        var sentryDsn = Environment.GetEnvironmentVariable("SENTRY_DSN");
+
+        if (!string.IsNullOrWhiteSpace(sentryDsn))
         {
-            options.Dsn = Environment.GetEnvironmentVariable("SENTRY_DSN");
+            _sentry = SentrySdk.Init(options =>
+            {
+                options.Dsn = sentryDsn;
 
 #if DEBUG
-            options.Debug = true;
+                options.Debug = true;
 #else
-            options.Debug = false;
+                options.Debug = false;
 #endif
 
-            options.AutoSessionTracking = true;
-        });
-
-        InitializeComponent();
+                options.AutoSessionTracking = true;
+            });
+        }
     }
 
     protected override void OnLaunched(LaunchActivatedEventArgs args)
@@ -38,6 +43,11 @@ public partial class App : Application
 
     private async void OnMainWindowClosed(object sender, WindowEventArgs args)
     {
+        if (_sentry is null)
+        {
+            return;
+        }
+
         await SentrySdk.FlushAsync(TimeSpan.FromSeconds(2));
         _sentry.Dispose();
     }
